@@ -24,7 +24,7 @@
         }
         ?>
 
-        <h1>Регистрация</h1>
+        <h1>Суперспособности</h1>
         <form action="submit.php" method="POST" id="form">
             <!-- Добавьте остальные поля формы с сохранением значений из cookie -->
             <label for="name">Имя:</label>
