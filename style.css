@@ -63,3 +63,13 @@ text-transform: uppercase;
 input[type="submit"]:hover {
 background-color: #006699;
 }
+.errors
+{
+    background-color: #106a47;
+    border: 5px solid #f5c6cb;
+    border-radius: 5px;
+    color: #ff0d0d;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+}
