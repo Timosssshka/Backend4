@@ -52,6 +52,9 @@
                 <option value="immortality" <?= getSelected('abilities', 'immortality') ?>>Бессмертие</option>
                 <option value="wall_pass" <?= getSelected('abilities', 'wall_pass') ?>>Прохождение сквозь стены</option>
                 <option value="levitation" <?= getSelected('abilities', 'levitation') ?>>Левитация</option>
+                 <option value="levitation" <?= getSelected('abilities', 'Flying') ?>>Полет</option>
+                 <option value="levitation" <?= getSelected('abilities', 'Teleportation') ?>>Телепортация</option>
+                
             </select>
 
             <label for="bio">Биография:</label>
