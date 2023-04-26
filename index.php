@@ -41,7 +41,7 @@
 
             <label>Пол:</label>
             <?= showError('gender') ?>
-            <label><input type="radio" name="gender" value="male" <?= getChecked('gender', 'male') ?>> Мужской</label>
+            <label><input type="radio" checked="checked" name="gender" value="male" <?= getChecked('gender', 'male') ?>> Мужской</label>
             <label><input type="radio" name="gender" value="female" <?= getChecked('gender', 'female') ?>> Женский</label>
 
             <label>Количество конечностей:</label>
