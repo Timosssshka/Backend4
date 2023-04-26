@@ -29,8 +29,19 @@ display: block;
 
 input[type="text"],
 input[type="email"],
-textarea {
+textarea : invalid {
 width: 100%;
+    border-color: red;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 3px;
+font-size: 14px;
+}
+input[type="text"],
+input[type="email"],
+textarea : invalid {
+width: 100%;
+    border-color: green;
 padding: 5px;
 border: 1px solid #ccc;
 border-radius: 3px;
