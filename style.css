@@ -83,8 +83,11 @@ background-color: #e90c0c;
     padding: 10px;
     text-align: center;
 }
-form input .req:invalid
+input:invalid
 {
-    border: 2px solid red;
+    border-color: red;
+}
+input:valid {
+    border-color: green;
 }
 
