@@ -83,12 +83,3 @@ background-color: #e90c0c;
     padding: 10px;
     text-align: center;
 }
-#name.errors
-{
-    border: 2px solid red;
-}
-#email.errors
-{
-    border: 2px solid red;
-}
-
