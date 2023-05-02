@@ -42,18 +42,17 @@
 
             <label>Пол:</label>
             <?= showError('gender') ?>
-            <label><input type="radio" checked="checked" name="gender" value="male" <?= getFieldValue(getChecked('gender', 'male')) ?>> Мужской</label>
-            <label><input type="radio" name="gender" value="female" <?= getFieldValue(getChecked('gender', 'female')) ?>> Женский</label>
+            <label><input type="radio" checked="checked" name="gender" value="male" <?= getChecked('gender', 'male') ?>> Мужской</label>
+            <label><input type="radio" name="gender" value="female" <?= getChecked('gender', 'female') ?>> Женский</label>
 
             <label>Количество конечностей:</label>
             <?= showError('limbs') ?>
             <label><input type="radio" checked="checked" name="limbs" value="2" <?= getSelected('limbs', '2') ?>> 2</label>
             <label><input type="radio" name="limbs" value="4" <?= getSelected('limbs', '4') ?>> 4</label>
             <label><input type="radio" name="limbs" value="6" <?= getSelected('limbs', '6') ?>> 6</label>
-<!--             <input type="text" name="limbs" id="limbs" value="<?= getFieldValue('limbs') ?>"> -->
             <label for="abilities">Сверхспособности:</label>
             <select name="abilities[]" id="abilities" multiple>
-                <option value="immortality" <?= getSelected('abilities', 'immortality') ?>>Бессмертие</option>
+                <option value="immortality" <?= getFieldValue(getSelected('abilities', 'immortality')) ?>>Бессмертие</option>
                 <option value="wall_pass" <?= getSelected('abilities', 'wall_pass') ?>>Прохождение сквозь стены</option>
                 <option value="levitation" <?= getSelected('abilities', 'levitation') ?>>Левитация</option>
                  <option value="levitation" <?= getSelected('abilities', 'Flying') ?>>Полет</option>
