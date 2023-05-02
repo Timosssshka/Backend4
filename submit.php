@@ -9,13 +9,6 @@ function showError($field)
     return '';
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Получаем выбранные значения и записываем их в куки-файл
-  if (isset($_POST["abilities"])) {
-    $selectedAb = implode(',', $_POST["abilities"]);
-    setcookie('abilities', $selectedAb, time() + 3600, '/');
-  }
-
 function getSelected($fieldName, $value)
 {
     if (isset($_COOKIE[$fieldName]) && in_array($value, explode(',', $_COOKIE[$fieldName]))) {
@@ -23,7 +16,6 @@ function getSelected($fieldName, $value)
     }
     return '';
 }
-
 function getChecked($fieldName, $value)
 {
     if (isset($_COOKIE[$fieldName]) && $_COOKIE[$fieldName] == $value) {
