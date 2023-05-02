@@ -19,7 +19,7 @@ function getSelected($fieldName, $value)
 if (isset($_POST["birth_year"])) {
     $value = $_POST["birth_year"];
     setcookie('birth_year', $value, time() + 3600, '/');
-
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Получаем выбранные значения и записываем их в куки-файл
