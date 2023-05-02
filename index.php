@@ -26,6 +26,7 @@
 
         <h1>Регистрация</h1>
         <form action="submit.php" method="POST" id="form">
+            <div class=oshibki>
             <!-- Добавьте остальные поля формы с сохранением значений из cookie -->
             <label for="name">Имя:</label>
             <?= showError('name') ?>
@@ -73,6 +74,7 @@
             </label>
 
             <input type="submit" value="Отправить">
+            </div>
         </form>
     </div>
      <script>
