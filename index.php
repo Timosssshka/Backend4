@@ -38,7 +38,7 @@
 
            <label for="birth_year">Год рождения:</label>
             <select name="birth_year" id="birth_year" required>
-                <option getSelected('birth_year', "") ?>>Выберите год</option>
+                <option getSelected('birth_year', "") ?>Выберите год</option>
                 <!-- Заполните значения для годов -->
             </select>
             <label>Пол:</label>
