@@ -44,14 +44,14 @@
             </select>
             <label>Пол:</label>
             <?= showError('gender') ?>
-            <label><input type="radio" checked="checked" name="gender" value="male" <?php if(isset($_POST['gender']) && $_POST['gender'] == 'male') echo 'checked'; ?>> Мужской</label>
-            <label><input type="radio" name="gender" value="female" <?php if(isset($_POST['gender']) && $_POST['gender'] == 'female') echo 'checked'; ?>> Женский</label>
+            <label><input type="radio" checked="checked" name="gender" value="male" <?= if(isset($_POST['gender']) && $_POST['gender'] == 'male') echo 'checked'; ?>> Мужской</label>
+            <label><input type="radio" name="gender" value="female" <?= if(isset($_POST['gender']) && $_POST['gender'] == 'female') echo 'checked'; ?>> Женский</label>
 
             <label>Количество конечностей:</label>
             <?= showError('limbs') ?>
-            <label><input type="radio" checked="checked" name="limbs" id="limbs" value="2" <?php echo getSelected('limbs', '2') ?>> 2</label>
-            <label><input type="radio" name="limbs" id="limbs" value="4" <?php echo getSelected('limbs', '4') ?>> 4</label>
-            <label><input type="radio" name="limbs" id="limbs" value="6" <?php echo getSelected('limbs', '6') ?>> 6</label>
+            <label><input type="radio" checked="checked" name="limbs" id="limbs" value="2" <?=  getSelected('limbs', '2') ?>> 2</label>
+            <label><input type="radio" name="limbs" id="limbs" value="4" <?=  getSelected('limbs', '4') ?>> 4</label>
+            <label><input type="radio" name="limbs" id="limbs" value="6" <?=  getSelected('limbs', '6') ?>> 6</label>
             <label for="abilities">Сверхспособности:</label>
             <select name="abilities[]" id="abilities" multiple>
                  <option value="immortality" <?= getSelected('abilities', 'immortality') ?>>Бессмертие</option>
