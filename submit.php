@@ -89,9 +89,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_SESSION['errors'] = [];
 
     // Валидация полей (проверка на пустоту и корректность)
-    if (empty($name)) {
+    if (empty($name)) 
+    {
     $errors[] = "Поле Имя не должно быть пустым.";
+    $errorClass = "errorsi"; // класс для подсветки поля
+    } 
+    else {
+    $errorClass = ""; // если ошибок нет, класс не нужен
 }
+    
 
 if (empty($email)) {
     $errors[] = "Поле E-mail не должно быть пустым.";
