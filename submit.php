@@ -8,6 +8,10 @@ function showError($field)
     }
     return '';
 }
+
+
+function getSelected($fieldName, $value)
+{
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Получаем выбранные значения и записываем их в куки-файл
   if (isset($_POST["abilities"])) {
@@ -15,16 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     setcookie('abilities', $selectedAb, time() + 3600, '/');
   }
 }
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Получаем выбранные значения и записываем их в куки-файл
-  if (isset($_POST["birth_year"])) {
-    $selectedFruits = implode(',', $_POST["birth_year"]);
-    setcookie('birth_year', $selectedFruits, time() + 3600, '/');
-  }
-}
-
-function getSelected($fieldName, $value)
-{
     if (isset($_COOKIE[$fieldName]) && in_array($value, explode(',', $_COOKIE[$fieldName]))) {
         return 'selected';
     }
