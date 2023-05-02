@@ -36,10 +36,22 @@
             <?= showError('email') ?>
             <input type="text" name="email" id="email" value="<?= getFieldValue('email') ?>">
 
-           <label for="birth_year">Год рождения:</label>
+<!--            <label for="birth_year">Год рождения:</label>
            <?= showError('birth_year') ?>
             <select name="birth_year" id="birth_year" >
-                <option value="<?= getSelected('birth_year', "") ?>">Выберите год</option>
+                <option value="<?= getSelected('birth_year', "") ?>">Выберите год</option> -->
+            <label for="birth_year">Год рождения:</label>
+<?= showError('birth_year') ?>
+<select name="birth_year" id="birth_year">
+    <option value="">Выберите год</option>
+    <?php
+    $selectedYear = getSelected('birth_year', "");
+    for ($i = date('Y'); $i >= date('Y') - 100; $i--) {
+        $selected = ($i == $selectedYear) ? 'selected' : '';
+        echo "<option value=\"$i\" $selected>$i</option>";
+    }
+    ?>
+</select>
                 <!-- Заполните значения для годов -->
             </select>
             <label>Пол:</label>
@@ -71,7 +83,7 @@
 
             <input type="submit" value="Отправить">
         </form>
-          <script>
+<!--           <script>
         // Заполнение списка годов
         const select = document.getElementById('birth_year');
         const currentYear = new Date().getFullYear();
@@ -81,7 +93,7 @@
             option.text = i;
             select.add(option);
         }
-    </script>
+    </script> -->
     </div>
 </body>
 </html>
