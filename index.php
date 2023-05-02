@@ -72,15 +72,26 @@
             <input type="submit" value="Отправить">
         </form>
           <script>
+              const select = document.getElementById('birth_year');
+const currentYear = new Date().getFullYear();
+for (let i = currentYear; i >= currentYear - 100; i--) {
+    const option = document.createElement('option');
+    option.value = i;
+    option.text = i;
+    if(i == <?= isset($_COOKIE['birth_year']) ? $_COOKIE['birth_year'] : '""' ?>) {
+      option.selected = true; // выбираем этот элемент, если год сохранен в куке
+    }
+    select.add(option);
+}
         // Заполнение списка годов
-        const select = document.getElementById('birth_year');
-        const currentYear = new Date().getFullYear();
-        for (let i = currentYear; i >= currentYear - 100; i--) {
-            const option = document.createElement('option');
-            option.value = i;
-            option.text = i;
-            select.add(option);
-        }
+//         const select = document.getElementById('birth_year');
+//         const currentYear = new Date().getFullYear();
+//         for (let i = currentYear; i >= currentYear - 100; i--) {
+//             const option = document.createElement('option');
+//             option.value = i;
+//             option.text = i;
+//             select.add(option);
+//         }
     </script>
     </div>
 </body>
