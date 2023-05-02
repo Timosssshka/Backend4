@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форма регистрации</title>
     <link rel="stylesheet" href="style.css">
@@ -24,7 +25,7 @@
         }
         ?>
 
-        <h1>Регистрация</h1>
+        <h1>Суперспособности</h1>
         <form action="submit.php" method="POST" id="form">
             <!-- Добавьте остальные поля формы с сохранением значений из cookie -->
             <label for="name">Имя:</label>
@@ -41,18 +42,23 @@
 
             <label>Пол:</label>
             <?= showError('gender') ?>
-			<label><input type="radio" checked="checked" name="gender" value="male" <?= getChecked('gender', 'male') ?> />Мужской</label>
-			<label><input type="radio" name="gender" value="female" <?= getChecked('gender', 'female') ?> />Женский</label>
+            <label><input type="radio" checked="checked" name="gender" value="male" <?= getChecked('gender', 'male') ?>> Мужской</label>
+            <label><input type="radio" name="gender" value="female" <?= getChecked('gender', 'female') ?>> Женский</label>
 
             <label>Количество конечностей:</label>
             <?= showError('limbs') ?>
-            <input type="text" name="limbs" id="limbs" value="<?= getFieldValue('limbs') ?>">
-<label for="abilities">Сверхспособности:</label>
+            <label><input type="radio" checked="checked" name="limbs" id="limbs" value="2" <?= getSelected('limbs', '2') ?>> 2</label>
+            <label><input type="radio" name="limbs" id="limbs" value="4" <?= getSelected('limbs', '4') ?>> 4</label>
+            <label><input type="radio" name="limbs" id="limbs" value="6" <?= getSelected('limbs', '6') ?>> 6</label>
+            <label for="abilities">Сверхспособности:</label>
             <select name="abilities[]" id="abilities" multiple>
-                <option value="immortality" <?= getSelected('abilities', 'immortality') ?>>Бессмертие</option>
+                <option <?php print $value['immortality']; ?> value="immortality">бессмертие</option>
                 <option value="wall_pass" <?= getSelected('abilities', 'wall_pass') ?>>Прохождение сквозь стены</option>
                 <option value="levitation" <?= getSelected('abilities', 'levitation') ?>>Левитация</option>
-            </select>
+                 <option value="levitation" <?= getSelected('abilities', 'Flying') ?>>Полет</option>
+                 <option value="levitation" <?= getSelected('abilities', 'Teleportation') ?>>Телепортация</option>
+               </select>
+            <?php if (!empty($messages['abilities'])) {print($messages['abilities']);}?>
 
             <label for="bio">Биография:</label>
             <textarea name="bio" id="bio"><?= getFieldValue('bio') ?></textarea>
