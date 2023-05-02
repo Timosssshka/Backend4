@@ -53,7 +53,7 @@
             <label>Количество конечностей:</label>
             <?= showError('limbs') ?>
             <label><input type="radio" name="limbs" value="2" <?=getSelected('limbs', '2')?>> 2</label>
-           <label><input type="radio" name="limbs" value="4" <?php if ($values['limbs'] == 4) {print 'checked';} ?>/>
+           <label><input type="radio" name="limbs" value="4" <?php if ($value['limbs'] == 4) {print 'checked';} ?>/>
                 4</label>
             <label><input type="radio" name="limbs" value="6" <?=getSelected('limbs', '6')?>> 6</label>
 
