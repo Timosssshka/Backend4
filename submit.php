@@ -37,9 +37,9 @@ function getFieldValue($fieldName)
 
 // Настройки подключения к базе данных
 $servername = "localhost";
-$username = "u52925";
-$password = "3596996";
-$dbname = "u52925";
+$username = "u52979";
+$password = "2087021";
+$dbname = "u52979";
 
 // Создание подключения
 try {
@@ -94,7 +94,13 @@ if (!empty($email) && (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match
     $errors[] = "Неверный формат e-mail.";
 }
 
+if (!empty($birth_year) && (!preg_match("/^(19|20)\d{2}$/", $birth_year) || intval($birth_year) > 2022)) {
+    $errors[] = "Год рождения должен быть в диапазоне от 1900 до 2022.";
+}
 
+if (!empty($limbs) && !preg_match("/^[0-4]$/", $limbs)) {
+    $errors[] = "Количество конечностей должно быть в диапазоне от 0 до 4.";
+}
 if(!$contract){
   $errors[] = "Пожалуйста ознакомьтесь с правилами.";
 }
