@@ -92,11 +92,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($name)) 
     {
     $errors[] = "Поле Имя не должно быть пустым.";
-    $errorClass = "errorsi"; // класс для подсветки поля
+    $nameStyle = "style='background-color: #ff0000;'"; // класс для подсветки поля
     } 
-    else {
-    $errorClass = ""; // если ошибок нет, класс не нужен
-}
     
 
 if (empty($email)) {
