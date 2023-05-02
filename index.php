@@ -44,8 +44,8 @@
             </select>
             <label>Пол:</label>
             <?= showError('gender') ?>
-            <label><input type="radio" checked="checked" name="gender" value="male" <?= getChecked('gender', 'male') ?>> Мужской</label>
-            <label><input type="radio" name="gender" value="female" <?= getChecked('gender', 'female') ?>> Женский</label>
+            <label><input type="radio" checked="checked" name="gender" value="male" <?php if(isset($_POST['gender']) && $_POST['gender'] == 'male') echo 'checked'; ?>> Мужской</label>
+            <label><input type="radio" name="gender" value="female" <?php if(isset($_POST['gender']) && $_POST['gender'] == 'female') echo 'checked'; ?>> Женский</label>
 
             <label>Количество конечностей:</label>
             <?= showError('limbs') ?>
