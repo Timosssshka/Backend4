@@ -1,88 +1,22 @@
+.avatar {
+    width: 100px;
+    border-radius: 16px;
+    box-shadow: -5px -5px 14px aqua;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    min-height: 100vh;
 }
 
-.container {
-    width: 80%;
-    max-width: 600px;
-    margin: 30px auto;
-    background-color: #fba6a6;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-border-radius: 20px;
+footer {
+    position: sticky;
+    top: 100%;
 }
 
-h1 {
-text-align: center;
-color: #333;
+.success {
+    color: green;
 }
 
-form {
-display: grid;
-grid-gap: 10px;
-}
-
-label {
-display: block;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-width: 100%;
-    border-color: red;
-padding: 5px;
-border: 1px solid #ccc;
-border-radius: 3px;
-font-size: 14px;
-}
-select {
-width: 100%;
-padding: 5px;
-font-size: 14px;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-margin-right: 5px;
-}
-
-input[type="submit"] {
-width: 100%;
-padding: 10px;
-background-color: #00c7cc;
-color: #fff;
-font-size: 16px;
-border: none;
-cursor: pointer;
-border-radius: 10px;
-text-transform: uppercase;
-}
-
-input[type="submit"]:hover {
-background-color: #006699;
-}
-.errors
-{
-background-color: #e90c0c;
-    border: 2px solid red;
-    border-radius: 5px;
-    color: #000000;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 18px;
-}
-.success
-{
-    background-color: #d4edda;
-    border: 1px solid #c3e6cb;
-    border-radius: 5px;
-    color: #155724;
-    margin-bottom: 20px;
-    padding: 10px;
-    text-align: center;
-}
-input:valid {
-    border-color: #fba6a6;
+.error-msg {
+  color: red;
 }
