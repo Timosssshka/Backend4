@@ -41,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Отображение формы
   $checked_male = isset($_SESSION['gender']) && $_SESSION['gender'] == 'male' ? 'checked' : '';
   $checked_female = isset($_SESSION['gender']) && $_SESSION['gender'] == 'female' ? 'checked' : '';
+}
 
 function getFieldValue($fieldName)
 {
