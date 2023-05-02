@@ -101,6 +101,18 @@ if (!empty($birth_year) && (!preg_match("/^(19|20)\d{2}$/", $birth_year) || intv
 if(!$contract){
   $errors[] = "Пожалуйста ознакомьтесь с правилами.";
 }
+      $values = array();
+  $values['name'] = empty($_COOKIE['name_value']) ? '' : $_COOKIE['name_value'];
+  $values['email'] = empty($_COOKIE['email_value']) ? '' : $_COOKIE['email_value'];
+  $values['birth_date'] = empty($_COOKIE['birth_date_value']) ? '' : $_COOKIE['birth_date_value'];
+  $values['gender'] = empty($_COOKIE['gender_value']) ? '' : $_COOKIE['gender_value'];
+  $values['limbs'] = empty($_COOKIE['limbs_value']) ? '' : $_COOKIE['limbs_value'];
+  $values['immortality'] = isset($_COOKIE['immortality_value']) ? 'selected' : '';
+  $values['levitation'] = isset($_COOKIE['levitation_value']) ? 'selected' : '';
+  $values['wall_passing'] = isset($_COOKIE['wall_passing_value']) ? 'selected' : '';
+  $values['telekinesis'] = isset($_COOKIE['telekinesis_value']) ? 'selected' : '';
+  $values['bio'] = empty($_COOKIE['bio_value']) ? '' : $_COOKIE['bio_value'];
+  $values['contract'] = empty($_COOKIE['contract_value']) ? '' : 'checked';
 
 $_SESSION['data'] = [
     'name' => $name,
