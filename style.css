@@ -36,6 +36,15 @@ border: 1px solid #ccc;
 border-radius: 3px;
 font-size: 14px;
 }
+.errors {
+    background-color: #e90c0c;
+    border: 2px solid #e90c0c;
+    border-radius: 5px;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+}
 
 select {
 width: 100%;
