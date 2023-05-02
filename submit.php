@@ -8,6 +8,13 @@ function showError($field)
     }
     return '';
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Получаем выбранные значения и записываем их в куки-файл
+  if (isset($_POST["abilities"])) {
+    $selectedFruits = implode(',', $_POST["abilities"]);
+    setcookie('abilities', $selectedFruits, time() + 3600, '/');
+  }
+}
 
 function getSelected($fieldName, $value)
 {
