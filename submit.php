@@ -26,7 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 
-
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Получаем выбранные значения и записываем их в куки-файл
+  if (isset($_POST["birth_year"])) {
+    $yearsss = implode(',', $_POST["birth_year"]);
+    setcookie('birth_year', $yearsss, time() + 3600, '/');
+  }
+}
 
 
 
