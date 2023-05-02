@@ -26,15 +26,14 @@
 
         <h1>Регистрация</h1>
         <form action="submit.php" method="POST" id="form">
-            <div id=oshibki>
             <!-- Добавьте остальные поля формы с сохранением значений из cookie -->
             <label for="name">Имя:</label>
             <?= showError('name') ?>
-            <input type="text" name="name" id="name" class="errors" value="<?= getFieldValue('name') ?>">
+            <input type="text" name="name" id="name"  value="<?= getFieldValue('name') ?>">
 
             <label for="email">E-mail:</label>
             <?= showError('email') ?>
-            <input type="text" name="email" id="email" class="errors" value="<?= getFieldValue('email') ?>">
+            <input type="text" name="email" id="email"  value="<?= getFieldValue('email') ?>">
 
 <!--             <label for="birth_year">Год рождения:</label> -->
            
@@ -42,7 +41,7 @@
             <label for="birth_year">Год рождения:</label> 
             <?= showError('birth_year') ?>
             <select name="birth_year" id="birth_year" >
-                <option class="errors"  value="<?= getSelected('birth_year',"") ?>">Выберите год</option>
+                <option   value="<?= getSelected('birth_year',"") ?>">Выберите год</option>
                 <!-- Заполните значения для годов -->
             </select>
 
@@ -74,7 +73,6 @@
             </label>
 
             <input type="submit" value="Отправить">
-            </div>
         </form>
     </div>
      <script>
