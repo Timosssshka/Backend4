@@ -40,7 +40,7 @@
             <input type="text" name="birth_year" id="birth_year" value="<?= getFieldValue('birth_year') ?>">
             <label for="birth_year">Год рождения:</label>
             <select name="birth_year" id="birth_year" >
-                <option  value="<?= getFieldValue('birth_year') ?>">Выберите год</option>
+                <option  value="<?= getSelected('birth_year') ?>">Выберите год</option>
                 <!-- Заполните значения для годов -->
             </select>
 
