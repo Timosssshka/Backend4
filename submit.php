@@ -16,6 +16,7 @@ function getSelected($fieldName, $value)
     }
     return '';
 }
+setcookie('birth_year', $selectedYear, time() + 3600 * 24 * 30, '/');
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
