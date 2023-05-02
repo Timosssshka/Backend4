@@ -30,7 +30,7 @@
             <!-- Добавьте остальные поля формы с сохранением значений из cookie -->
             <label for="name">Имя:</label>
             <?= showError('name') ?>
-            <input type="text" name="name" id="name" <?php if ($nameClass) {echo 'class="errorsi"';} ?> value="<?= getFieldValue('name') ?>">
+            <input type="text" name="name" id="name" <?php if ($errors) {echo 'class="errorsi"';} ?> value="<?= getFieldValue('name') ?>">
 
             <label for="email">E-mail:</label>
             <?= showError('email') ?>
