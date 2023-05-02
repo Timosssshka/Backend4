@@ -83,15 +83,4 @@ background-color: #e90c0c;
     padding: 10px;
     text-align: center;
 }
-input:invalid
-{
-    border-color: red;
-}
-input:valid {
-    border-color: green;
-}
-        .error {
-            border: 2px solid red;
-        }
-
 
