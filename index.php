@@ -39,7 +39,7 @@
            <label for="birth_year">Год рождения:</label>
            <?= showError('birth_year') ?>
             <select name="birth_year" id="birth_year" >
-                <option value="<?= getSelected('birth_year', "") ?>">Выберите год</option>
+                <option value="<?php echo getSelected('birth_year', "") ?>">Выберите год</option>
                 <!-- Заполните значения для годов -->
             </select>
             <label>Пол:</label>
