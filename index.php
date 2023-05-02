@@ -36,10 +36,11 @@
             <?= showError('email') ?>
             <input type="text" name="email" id="email" value="<?= getFieldValue('email') ?>">
 
-            <label for="birth_year">Год рождения:</label>
-            <?= showError('birth_year') ?>
-            <input type="text" name="birth_year" id="birth_year" value="<?= getFieldValue('birth_year') ?>">
-
+           <label for="birth_year">Год рождения:</label>
+            <select name="birth_year" id="birth_year" required>
+                <option getSelected('birth_year', "") ?>>Выберите год</option>
+                <!-- Заполните значения для годов -->
+            </select>
             <label>Пол:</label>
             <?= showError('gender') ?>
             <label><input type="radio" checked="checked" name="gender" value="male" <?= getChecked('gender', 'male') ?>> Мужской</label>
@@ -69,6 +70,17 @@
 
             <input type="submit" value="Отправить">
         </form>
+          <script>
+        // Заполнение списка годов
+        const select = document.getElementById('birth_year');
+        const currentYear = new Date().getFullYear();
+        for (let i = currentYear; i >= currentYear - 100; i--) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.text = i;
+            select.add(option);
+        }
+    </script>
     </div>
 </body>
 </html>
