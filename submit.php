@@ -16,9 +16,11 @@ function getSelected($fieldName, $value)
     }
     return '';
 }
-if (isset($_POST["birth_year"])) {
-    $value = $_POST["birth_year"];
-    setcookie('birth_year', $value, time() + 3600, '/');
+if (isset($_POST['birth_year'])) {
+    // сохраняем значение года рождения в куки
+    setcookie('birth_year', $_POST['birth_year'], time() + (86400 * 30), '/'); // куки на 30 дней
+    // дополнительный код обработки формы
+    // ...
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
