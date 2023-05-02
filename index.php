@@ -82,5 +82,6 @@
             option.text = i;
             select.add(option);
         }
+    </script>
 </body>
 </html>
