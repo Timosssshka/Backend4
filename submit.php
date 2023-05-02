@@ -11,8 +11,15 @@ function showError($field)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Получаем выбранные значения и записываем их в куки-файл
   if (isset($_POST["abilities"])) {
-    $selectedFruits = implode(',', $_POST["abilities"]);
-    setcookie('abilities', $selectedFruits, time() + 3600, '/');
+    $selectedAb = implode(',', $_POST["abilities"]);
+    setcookie('abilities', $selectedAb, time() + 3600, '/');
+  }
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Получаем выбранные значения и записываем их в куки-файл
+  if (isset($_POST["birth_year"])) {
+    $selectedFruits = implode(',', $_POST["birth_year"]);
+    setcookie('birth_year', $selectedFruits, time() + 3600, '/');
   }
 }
 
