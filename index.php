@@ -40,7 +40,7 @@
             <input type="text" name="birth_year" id="birth_year" value="<?= getFieldValue('birth_year') ?>">
 
             <label>Пол:</label>
-            < <?= showError('gender') ?>
+            <?= showError('gender') ?>
 			<label><input type="radio" checked="checked" name="gender" value="male" <?= getChecked('gender', 'male') ?> />Мужской</label>
 			<label><input type="radio" name="gender" value="female" <?= getChecked('gender', 'female') ?> />Женский</label>
 
