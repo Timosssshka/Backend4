@@ -52,7 +52,7 @@
             <label><input type="radio" name="limbs" value="6" <?= getSelected('limbs', '6') ?>> 6</label>
             <label for="abilities">Сверхспособности:</label>
             <select name="abilities[]" id="abilities" multiple>
-                <option value="immortality" <?= getFieldValue(getSelected('abilities', 'immortality')) ?>>Бессмертие</option>
+                <option value="immortality" <?= getSelected('abilities', 'immortality') ?>>Бессмертие</option>
                 <option value="wall_pass" <?= getSelected('abilities', 'wall_pass') ?>>Прохождение сквозь стены</option>
                 <option value="levitation" <?= getSelected('abilities', 'levitation') ?>>Левитация</option>
                  <option value="levitation" <?= getSelected('abilities', 'Flying') ?>>Полет</option>
