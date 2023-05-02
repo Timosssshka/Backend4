@@ -46,7 +46,10 @@
 
             <label>Количество конечностей:</label>
             <?= showError('limbs') ?>
-            <input type="text" name="limbs" id="limbs" value="<?= getFieldValue('limbs') ?>">
+            <label><input type="radio" name="limbs" value="2" getSelected('limbs', '2') 2</label>
+           <label><input type="radio" name="limbs" value="4" getSelected('limbs', '4') 4</label>
+            <label><input type="radio" name="limbs" value="6" getSelected('limbs', '6') 6</label>
+
 <label for="abilities">Сверхспособности:</label>
             <select name="abilities[]" id="abilities" multiple>
                 <option value="immortality" <?= getSelected('abilities', 'immortality') ?>>Бессмертие</option>
