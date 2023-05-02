@@ -34,14 +34,7 @@ function getChecked($fieldName, $value)
     return '';
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  // Обработка отправленной формы
-  $_SESSION['gender'] = $_POST['gender']; // Значение выбранной радиокнопки сохраняется в сессии
-} else {
-  // Отображение формы
-  $checked_male = isset($_SESSION['gender']) && $_SESSION['gender'] == 'male' ? 'checked' : '';
-  $checked_female = isset($_SESSION['gender']) && $_SESSION['gender'] == 'female' ? 'checked' : '';
-}
+
 
 function getFieldValue($fieldName)
 {
