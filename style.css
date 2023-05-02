@@ -83,3 +83,6 @@ background-color: #e90c0c;
     padding: 10px;
     text-align: center;
 }
+input:valid {
+    border-color: #fba6a6;
+}
