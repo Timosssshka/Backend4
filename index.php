@@ -46,9 +46,9 @@
 
             <label>Количество конечностей:</label>
             <?= showError('limbs') ?>
-            <label><input type="radio" name="limbs" value="2" getSelected('limbs', '2') 2</label>
-           <label><input type="radio" name="limbs" value="4" getSelected('limbs', '4') 4</label>
-            <label><input type="radio" name="limbs" value="6" getSelected('limbs', '6') 6</label>
+            <label><input type="radio" name="limbs" value="2" <?=getSelected('limbs', '2')?>> 2</label>
+           <label><input type="radio" name="limbs" value="4"<?= getSelected('limbs', '4')?>> 4</label>
+            <label><input type="radio" name="limbs" value="6" <?=getSelected('limbs', '6')?>> 6</label>
 
 <label for="abilities">Сверхспособности:</label>
             <select name="abilities[]" id="abilities" multiple>
