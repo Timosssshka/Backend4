@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $selectedAb = implode(',', $_POST["abilities"]);
     setcookie('abilities', $selectedAb, time() + 3600, '/');
   }
-}
     if (isset($_COOKIE[$fieldName]) && in_array($value, explode(',', $_COOKIE[$fieldName]))) {
         return 'selected';
     }
