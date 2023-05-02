@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   // Включаем содержимое файла form.php.
   // В нем будут доступны переменные $messages, $errors и $values для вывода 
   // сообщений, полей с ранее заполненными данными и признаками ошибок.
-  include('form.php');
+  include('index.php');
 }
 // Иначе, если запрос был методом POST, т.е. нужно проверить данные и сохранить их в XML-файл.
 else {
@@ -233,7 +233,7 @@ else {
                 $superpower_id = 4;
               break;
         }
-      $query = "INSERT INTO user_superpowers (user_id, superpower_id) VALUES ('$last_id', '$superpower_id')";
+      $query = "INSERT INTO user_abilities (user_id, superpower_id) VALUES ('$last_id', '$superpower_id')";
       mysqli_query($conn, $query);
     }
     $stmt->close();
