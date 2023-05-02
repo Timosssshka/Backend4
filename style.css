@@ -73,10 +73,6 @@ background-color: #e90c0c;
     text-align: center;
     font-size: 18px;
 }
-.error
-{
-    border: 2px solid red;
-}
 .success
 {
     background-color: #d4edda;
@@ -86,5 +82,9 @@ background-color: #e90c0c;
     margin-bottom: 20px;
     padding: 10px;
     text-align: center;
+}
+oshibki.errors
+{
+    border: 2px solid red;
 }
 
